@@ -4,7 +4,7 @@ import groovy.io.*;
 
 def call(Map config=[:]) {
     def workspace = new File(pwd());
-    new File(workspace.path + '/manifest.txt').withWriter('utf-8')
+    new File(workspace.path + '@script/manifest.txt').withWriter('utf-8')
             {
                 writer ->
                     dir.eachFileRecurse(FileType.ANY) {
