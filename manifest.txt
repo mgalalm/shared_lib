@@ -1,0 +1,78 @@
+manifest.txt	0
+manifest.xml	1252
+README.md	9
+Jenkinsfile	285
+.git
+config	371
+objects
+61
+260a6d2d9c2e22c313abb6d345fdc73b8d0b67	92
+6a
+5d9c0d6488cd8daf209362acec323a8fedc937	53
+35
+a67a35ba1ee9ea3d62074c06b7ed21b20ff957	89
+a3
+7fe01da1ce663429fb045050f23db44b3962af	157
+b5
+e7dd3c8567fe9685b4659d77454cd45ab0f43b	133
+18
+fba2deb270bedd45d17a2447d06b7eaa8626b1	161
+pack
+43
+a0c2c170c95c5244fd6488d646416873325e1e	24
+info
+5b
+a06df27cb0d8989b2fec6fbd97d33525a99b34	89
+a8
+579d3104b58ff1d7a60c5a8ebc9f967aa74e16	88
+84
+4cb309baeb4324c5a6cf8fe92240551334c8e7	123
+2b
+ba1afc7dd7e66c6ff638d7209191a55944c8ad	151
+8b
+6172383f4478c74c79b246c2a1a19b543224b4	161
+HEAD	24
+info
+exclude	240
+logs
+HEAD	786
+refs
+heads
+develop	308
+master	464
+remotes
+origin
+develop	288
+master	432
+description	73
+hooks
+commit-msg.sample	896
+pre-rebase.sample	4898
+pre-commit.sample	1643
+applypatch-msg.sample	478
+fsmonitor-watchman.sample	4655
+pre-receive.sample	544
+prepare-commit-msg.sample	1492
+post-update.sample	189
+pre-merge-commit.sample	416
+pre-applypatch.sample	424
+pre-push.sample	1348
+update.sample	3635
+refs
+heads
+develop	41
+master	41
+tags
+remotes
+origin
+develop	41
+master	41
+index	217
+COMMIT_EDITMSG	16
+Shared.groovy	424
+.idea
+vcs.xml	167
+workspace.xml	14141
+devops.iml	410
+modules.xml	264
+misc.xml	317
