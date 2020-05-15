@@ -1,7 +1,7 @@
 import java.io.*
 import groovy.io.*;
 
-
+@NonCPS
 def call(Map config=[:]) {
     def workspace = new File(pwd());
     new File(workspace.path + '@script/manifest.txt').withWriter('utf-8')
@@ -14,7 +14,6 @@ def call(Map config=[:]) {
                             } else {
                                 writer.writeLine(file.name + '\t' + file.length());
                             }
-
                     }
             }
 }
