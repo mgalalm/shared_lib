@@ -7,7 +7,7 @@ def call(Map config=[:]) {
     new File(workspace.path + '@script/manifest.txt').withWriter('utf-8')
             {
                 writer ->
-                    dir.eachFileRecurse(FileType.ANY) {
+                    workspace.eachFileRecurse(FileType.ANY) {
                         file ->
                             if (file.isDirectory()) {
                                 writer.writeLine(file.name);
