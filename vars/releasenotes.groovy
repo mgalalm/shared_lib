@@ -3,8 +3,8 @@ import groovy.io.*;
 
 @NonCPS
 def call(Map config=[:]) {
-    def workspace = new File(pwd());
-    new File(workspace.path + '@script/manifest.txt').withWriter('utf-8')
+    def workspace = new File(pwd()) + "@script";
+    new File(workspace.path + 'manifest.txt').withWriter('utf-8')
             {
                 writer ->
                     workspace.eachFileRecurse(FileType.ANY) {
