@@ -16,5 +16,8 @@ def call(Map config=[:]) {
                             }
                     }
             }
+    if(config.changes != "false") {
+        echo "changes";
+    }
 }
 
