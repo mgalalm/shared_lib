@@ -23,6 +23,7 @@ def call(Map config=[:]) {
     echo "Date and Time IS: " + sdf.format(date);
 
     echo "Last build number is " + currentBuild.getNumber()
+    echo "Current build number" + ${BUILD_NUMBER}
     if(config.changes != "false") {
         echo "changes";
     }
