@@ -35,7 +35,7 @@ def call(Map config=[:]) {
 }
 
 @NonCPS
-private void showChangeLogs(RunWrapper currentBuild) {
+private void showChangeLogs(currentBuild) {
     def changeLogSets = currentBuild.changeSets;
 
     for (change in changeLogSets) {
