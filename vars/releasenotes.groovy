@@ -1,4 +1,4 @@
-//import hudson.scm.ChangeLogSet.Entry
+import hudson.scm.ChangeLogSet.Entry
 import org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper;
 import groovy.io.*
 
@@ -27,22 +27,27 @@ def call(Map config=[:]) {
     echo "Last build number is " + currentBuild.getNumber()
     echo "Current build number ${BUILD_NUMBER}"
 
+    showChangeLogs(currentBuild)
+
+    if(config.changes != "false") {
+        echo "changes";
+    }
+}
+
+@NonCPS
+private void showChangeLogs(RunWrapper currentBuild) {
     def changeLogSets = currentBuild.changeSets;
 
-    for(change in changeLogSets) {
-         entries = change.items;
+    for (change in changeLogSets) {
+        entries = change.items;
         for (entry in entries) {
             echo "${entry.commitId} by ${entry.author} on ${new Date(entry.timestamp)} ${entry.msg})"
-            for(file in entry.affectedFiles){
+            for (file in entry.affectedFiles) {
                 echo "${file.editType.name} ${file.path}"
             }
         }
 
 
-    }
-
-    if(config.changes != "false") {
-        echo "changes";
     }
 }
 
