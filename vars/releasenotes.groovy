@@ -1,6 +1,6 @@
-import hudson.model.Build
 import hudson.scm.ChangeLogSet
 import hudson.scm.ChangeLogSet.Entry
+import org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper;
 import groovy.io.*
 
 
@@ -24,7 +24,7 @@ def call(Map config=[:]) {
     def date =  new Date();
     def sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:sss");
     echo "Date and Time IS: " + sdf.format(date);
-    currentBuild =  (Build)currentBuild
+    currentBuild =  (RunWrapper)currentBuild
     echo "Last build number is " + currentBuild.getNumber()
     echo "Current build number ${BUILD_NUMBER}"
 
