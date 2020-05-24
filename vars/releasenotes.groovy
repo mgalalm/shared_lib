@@ -38,11 +38,11 @@ def call(Map config=[:]) {
 private void showChangeLogs(currentBuild) {
     def changeLogSets = currentBuild.changeSets;
 
-    for (change in changeLogSets) {
+    changeLogSets.each { change ->
         entries = change.items;
-        for (entry in entries) {
+        entries.each { entry ->
             echo "${entry.commitId} by ${entry.author} on ${new Date(entry.timestamp)} ${entry.msg})"
-            for (file in entry.affectedFiles) {
+            entry.affectedFiles.each { file ->
                 echo "${file.editType.name} ${file.path}"
             }
         }
