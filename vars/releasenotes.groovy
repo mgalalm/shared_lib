@@ -1,4 +1,3 @@
-import hudson.scm.ChangeLogSet
 import hudson.scm.ChangeLogSet.Entry
 import org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper;
 import groovy.io.*
