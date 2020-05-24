@@ -1,5 +1,5 @@
-import hudson.scm.ChangeLogSet.Entry
-import org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper;
+//import hudson.scm.ChangeLogSet.Entry
+//import org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper;
 import groovy.io.*
 
 
@@ -31,7 +31,7 @@ def call(Map config=[:]) {
 
     for(change in changeLogSets) {
          entries = change.items;
-        for (Entry entry in entries) {
+        for (entry in entries) {
             echo "${entry.commitId} by ${entry.author} on ${new Date(entry.timestamp)} ${entry.msg})"
             for(file in entry.affectedFiles){
                 echo "${file.editType.name} ${file.path}"
