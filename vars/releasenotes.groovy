@@ -1,5 +1,6 @@
-import hudson.model.*;
-import hudson.scm.*;
+import hudson.model.Build
+import hudson.scm.ChangeLogSet
+import hudson.scm.ChangeLogSet.Entry
 import groovy.io.*
 
 
@@ -37,6 +38,8 @@ def call(Map config=[:]) {
                 echo "${file.editType.name} ${file.path}"
             }
         }
+
+
     }
 
     if(config.changes != "false") {
