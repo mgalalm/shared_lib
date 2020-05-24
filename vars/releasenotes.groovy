@@ -27,7 +27,7 @@ def call(Map config=[:]) {
     echo "Last build number is " + currentBuild.getNumber()
     echo "Current build number ${BUILD_NUMBER}"
 
-    showChangeLogs(RunWrapper currentBuild)
+    showChangeLogs(currentBuild)
 
     if(config.changes != "false") {
         echo "changes";
